@@ -1,0 +1,45 @@
+.user-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.fortune-teller-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}
+
+#fortune-teller {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  background: url(http://mkws.ac.th/vihantape02/app/mk-ss.png) 0 0 no-repeat;
+  background-size: 100%;
+  animation: like-gif steps(28) 1s infinite both;
+}
+
+.pause {
+  animation-play-state: paused !important;
+}
+
+@keyframes like-gif {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

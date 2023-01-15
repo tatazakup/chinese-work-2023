@@ -1,0 +1,87 @@
+#siemsi-btn {
+  background: url(../img/Button-1.png) 0 0 no-repeat;
+  background-size: contain;
+}
+
+#rd-btn {
+  background: url(../img/redirect-first-page-btn.png) 0 0 no-repeat;
+  background-size: contain;
+}
+
+#pv-btn {
+  background: url(../img/previous-btn.png) 0 0 no-repeat;
+  background-size: contain;
+}
+
+.btn-size {
+  width: 230px;
+  height: 100px;
+}
+
+.btn-lp {
+  position: absolute;
+  bottom: 6%;
+  left: 10%;
+}
+
+.btn-rp {
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
+}
+
+.btn-size .fireworks {
+  position: absolute;
+  transform: scale(0);
+}
+
+.btn-size .fireworks::before,
+.btn-size .fireworks::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  box-shadow:
+    0 -25px 0 0 #ff8080, 25px 0 0 0 #a4ff80, 0 25px 0 0 #ffed80,
+    -25px 0 0 0 #a480ff, 12px -13px 0 0 #80c8ff, 25px 25px 0 0 #ff80ed,
+    -13px 12px 0 0 #80ffc8, -25px -25px 0 0 #ffed80, 50px -25px 0 0 #a4ff80;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.btn-size .fireworks::after {
+  width: 2px;
+  height: 2px;
+  transform: rotate(112deg);
+}
+
+.btn.animation .fireworks {
+  animation: spread 2s forwards;
+  will-change: box-shadow;
+}
+
+@keyframes spread {
+
+  0%,
+  10% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2) rotate(40deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(40deg) skewX(-25deg);
+  }
+}
+
+.selection-wrapper {
+  position: relative;
+}
+
+.tp-btn {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+}
